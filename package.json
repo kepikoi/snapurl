@@ -1,0 +1,32 @@
+{
+  "name": "snapurl",
+  "version": "0.0.0",
+  "description": "Screenshot URLs periodically to host them in a secure environment",
+  "main": "dist/index.js",
+  "bin": {
+    "azdash": "./bin/snapurl.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc",
+    "prestart": "npm run build",
+    "start": "ts-node-dev src/index.ts",
+    "session:delete": "node dist/scripts/delete-session.js"
+  },
+  "author": "kepi@binks.rocks",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "log-timestamp": "^0.3.0",
+    "puppeteer": "^2.0"
+  },
+  "devDependencies": {
+    "@tangany/tslint-config": "^2.0.0",
+    "@types/node": "^14.0.1",
+    "@types/puppeteer": "^2.0",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.9.2"
+  }
+}
